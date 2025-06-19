@@ -1,0 +1,25 @@
+/* Fonts */
+@import url('https://fonts.cdnfonts.com/css/inter');
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+@import "tailwindcss";
+
+@theme {
+    --color-perfectred: #FF4646;
+    --color-background: #2a2a28;
+    --color-bgaccent: #222221;
+    --color-graycustom: #B0B0B0;
+    --color-offwhite: #F2F0EF;
+
+    --font-inter: "inter", "sans-serif";
+    --font-apple: "SF Pro Display", "sans-serif";
+}
+
+/* Custom cursors */
+.specialcursor {
+    cursor: url("../img/icons/cursor.png"), auto;
+}
+
+.specialcursor2 {
+    cursor: url("../img/icons/cursor2.png"), auto;
+}

@@ -1,0 +1,21 @@
+﻿/node_modules
+compile_css.cmd
+/.idea
+src/package-lock.json
+src/demos
+/src/archive
+/src/node_modules
+/src/assets/css/style.css
+package-lock.json
+/src/casino
+/src/rekenen
+
+# Environment and deployment files (not in public repo)
+.env
+.env.local
+.env.production
+docker-compose.yml
+docker-compose.override.yml
+/deployment/
+/server-configs/
+/nginx-conf/

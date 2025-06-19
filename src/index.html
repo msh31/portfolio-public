@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-background">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marco's Portfolio">
+    <meta name="author" content="Marco H.">
+    <link rel="icon" type="image/x-icon" href="archive/first-version/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> <!-- i hate this -->
+    <title>Marco's Portfolio</title>
+</head>
+<body class="font-inter overflow-x-hidden h-full min-h-screen flex flex-col">
+
+
+<nav class="bg-bgaccent">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto px-4 py-2">
+        <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none text-gray-400 hover:text-perfectred" aria-controls="navbar-dropdown" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-background md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                <li>
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 cursor-pointer rounded-sm hover:text-perfectred md:hover:bg-transparent md:border-0 md:p-0 md:w-auto text-white">Demos
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownNavbar" class="z-10 hidden font-normal rounded-lg shadow-md w-44 bg-bgaccent">
+                        <ul class="py-2 text-sm text-graycustom" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="casino/" class="block px-4 py-2 hover:bg-background hover:text-perfectred">Marco's Casino</a>
+                            </li>
+                            <li>
+                                <a href="rekenen/" class="block px-4 py-2 hover:bg-background hover:text-perfectred">Rekensite</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="flex-grow flex flex-col">
+        <main class="flex-1 p-3 flex flex-col">
+            <!-- Header -->
+            <div class="font-medium ml-2 md:ml-16 mb-4 md:mb-8">
+                <h1 class="text-offwhite font-apple text-4xl md:text-7xl pl-2 md:pl-7 pt-4 md:pt-7">Hi, I'm <span class="text-perfectred">Marco</span>.</h1>
+                <h1 class="pl-4 md:pl-30 text-neutral-400 text-xl md:text-2xl">Software Engineer</h1>
+            </div>
+
+            <!-- Skills / Contact / About Me -->
+            <div class="max-w-7xl mx-auto w-full px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[300px_300px_1fr] gap-6 md:gap-16 cursor-pointer">
+                <!-- Skills -->
+                <div class="bg-bgaccent rounded w-full p-4">
+                    <h3 class="text-offwhite text-2xl mb-4 font-medium text-center">Skills</h3>
+
+                    <!-- Frontend -->
+                    <div class="mb-4">
+                        <h4 class="text-perfectred text-lg mb-2 pl-2">Frontend</h4>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="flex items-center text-offwhite p-2 bg-background rounded hover:bg-[#252525] transition-colors">
+                                <i class="devicon-tailwindcss-original text-xl mr-2 flex-shrink-0"></i>
+                                <span class="text-sm">TailwindCSS</span>
+                            </div> <!-- smaller text and icon = success -->
+                            <div class="flex items-center space-x-3 text-offwhite p-2 bg-background rounded hover:bg-[#252525] transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
+                                    <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"/>
+                                    <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"/>
+                                </svg>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Programming -->
+                    <div class="mb-4">
+                        <h4 class="text-perfectred text-lg mb-2 pl-2">Languages</h4>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="flex items-center space-x-3 text-offwhite p-2 bg-background rounded hover:bg-[#252525] transition-colors">
+                                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256"
+                                     style="fill:#FFFFFF;">
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,2c-0.71484,0 -1.42969,0.17969 -2.06641,0.53906l-16.84375,9.46484c-1.28906,0.72266 -2.08984,2.07813 -2.08984,3.53125v18.92969c0,1.45313 0.80078,2.80859 2.08984,3.53125l16.84375,9.46484c0.63672,0.35938 1.35156,0.53906 2.06641,0.53906c0.71484,0 1.42969,-0.17969 2.06641,-0.53906l16.84375,-9.46094c1.28906,-0.72656 2.08984,-2.08203 2.08984,-3.53516v-18.92969c0,-1.45312 -0.80078,-2.80859 -2.08984,-3.53125l-16.84375,-9.46484c-0.63672,-0.35937 -1.35156,-0.53906 -2.06641,-0.53906zM25,13c3.78125,0 7.27734,1.75391 9.54297,4.73828l-4.38281,2.53906c-1.31641,-1.44141 -3.1875,-2.27734 -5.16016,-2.27734c-3.85937,0 -7,3.14063 -7,7c0,3.85938 3.14063,7 7,7c1.97266,0 3.84375,-0.83594 5.16016,-2.27734l4.38281,2.53906c-2.26562,2.98438 -5.76172,4.73828 -9.54297,4.73828c-6.61719,0 -12,-5.38281 -12,-12c0,-6.61719 5.38281,-12 12,-12zM35,20h2v2h2v-2h2v2h2v2h-2v2h2v2h-2v2h-2v-2h-2v2h-2v-2h-2v-2h2v-2h-2v-2h2zM37,24v2h2v-2z"></path></g></g>
+                                </svg>
+                                <span>C#</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-offwhite p-2 bg-background rounded hover:bg-[#252525] transition-colors">
+                                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" id="mdi-language-lua" fill="white" viewBox="0 0 24 24"><path d="M10.5,5A8.5,8.5 0 0,0 2,13.5A8.5,8.5 0 0,0 10.5,22A8.5,8.5 0 0,0 19,13.5A8.5,8.5 0 0,0 10.5,5M13.5,13A2.5,2.5 0 0,1 11,10.5A2.5,2.5 0 0,1 13.5,8A2.5,2.5 0 0,1 16,10.5A2.5,2.5 0 0,1 13.5,13M19.5,2A2.5,2.5 0 0,0 17,4.5A2.5,2.5 0 0,0 19.5,7A2.5,2.5 0 0,0 22,4.5A2.5,2.5 0 0,0 19.5,2" /></svg>
+                                <span>LUA</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-offwhite p-2 bg-background rounded hover:bg-[#252525] transition-colors">
+                                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50"
+                                     style="fill:#FFFFFF;">
+                                    <path d="M 25 12 C 11.542969 12 1 17.710938 1 25 C 1 32.289063 11.542969 38 25 38 C 38.457031 38 49 32.289063 49 25 C 49 17.710938 38.457031 12 25 12 Z M 22.507813 16 L 25.128906 16 L 24.296875 20 L 26.636719 20 C 28.121094 20 29.117188 20.207031 29.683594 20.726563 C 30.238281 21.238281 30.40625 22.078125 30.183594 23.222656 L 29.144531 28 L 26.480469 28 L 27.4375 23.582031 C 27.554688 22.976563 27.507813 22.554688 27.304688 22.332031 C 27.101563 22.109375 26.65625 22 25.988281 22 L 23.890625 22 L 22.625 28 L 20 28 Z M 11 20 L 16.332031 20 C 18.875 20 20.414063 21.703125 19.8125 24.246094 C 19.113281 27.199219 17.238281 28 13.792969 28 L 12.144531 28 L 11.621094 31 L 8.972656 31 Z M 32 20 L 37.332031 20 C 39.875 20 41.414063 21.703125 40.8125 24.246094 C 40.113281 27.199219 38.238281 28 34.792969 28 L 33.144531 28 L 32.621094 31 L 29.972656 31 Z M 13.269531 22 L 12.515625 26 L 14.226563 26 C 15.707031 26 17.082031 25.832031 17.3125 23.625 C 17.398438 22.769531 17.042969 22 15.332031 22 Z M 34.269531 22 L 33.515625 26 L 35.226563 26 C 36.707031 26 38.082031 25.832031 38.3125 23.625 C 38.398438 22.769531 38.042969 22 36.332031 22 Z"></path>
+                                </svg>
+                                <span>PHP</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-offwhite p-2 bg-background rounded hover:bg-[#252525] transition-colors">
+                                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256"
+                                     style="fill:#FFFFFF;">
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M24.5,2c-8.69922,0 -10.5,4.49219 -10.5,7.09375v4.90625h10v1h-14.90625c-3.30078,0 -7.09375,2.60156 -7.09375,10c0,7.39844 3.79297,10 7.09375,10h5.90625v-6c0,-2.19922 1.80078,-4 4,-4h12c1.69922,0 3,-1.30078 3,-3v-12.90625c0,-3.5 -3.30078,-7.09375 -9.5,-7.09375zM20,7c1.10156,0 2,0.89844 2,2c0,1.10156 -0.89844,2 -2,2c-1.10156,0 -2,-0.89844 -2,-2c0,-1.10156 0.89844,-2 2,-2zM35,15v7c0,2.19922 -1.80078,4 -4,4h-12c-1.69922,0 -3,1.30078 -3,3v11.90625c0,3.5 3.30078,7.09375 9.5,7.09375c8.69922,0 10.5,-4.49219 10.5,-7.09375v-4.90625h-10v-1h14.90625c3.30078,0 7.09375,-2.60156 7.09375,-10c0,-7.39844 -3.79297,-10 -7.09375,-10zM30,39c1.10156,0 2,0.89844 2,2c0,1.10156 -0.89844,2 -2,2c-1.10156,0 -2,-0.89844 -2,-2c0,-1.10156 0.89844,-2 2,-2z"></path></g></g>
+                                </svg>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div>
+                        <h4 class="text-perfectred text-lg mb-2 pl-2">Tools</h4>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="flex items-center space-x-3 text-offwhite p-2 bg-background rounded hover:bg-[#252525] transition-colors">
+                                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+                                    <path d="M480.1 230.8L281.1 31.9c-15.9-15.9-41.8-15.9-57.7 0l-44.2 44.2 61.7 61.7c11.5-3.9 24.8-1.3 34.1 7.9 9.3 9.3 11.9 22.6 7.9 34.1l54.2 54.2c11.5-3.9 24.8-1.3 34.1 7.9 12.6 12.6 12.6 32.9 0 45.5-12.6 12.6-32.9 12.6-45.5 0-10.2-10.2-12.2-25.3-6.1-37.2l-49.6-49.6v130.2c3 1.5 5.9 3.5 8.4 6 12.6 12.6 12.6 32.9 0 45.5s-32.9 12.6-45.5 0c-12.6-12.6-12.6-32.9 0-45.5 2.7-2.7 5.9-4.7 9.1-6.2V204.4c-3.2-1.5-6.4-3.6-9.1-6.2-10.2-10.2-12.2-25.3-6.1-37.2L167.3 98.8 31.9 234.3c-15.9 15.9-15.9 41.8 0 57.7l199 199c15.9 15.9 41.8 15.9 57.7 0l191.5-191.5c15.9-15.9 15.9-41.8 0-57.7z" fill="currentColor"/>
+                                </svg>
+                                <span>Git</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-offwhite p-2 bg-background rounded hover:bg-[#252525] transition-colors">
+                                <svg class="w-8 h-8" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M7.00005 2.04999H5.52505C4.71043 2.04999 4.05005 2.71037 4.05005 3.52499C4.05005 4.33961 4.71043 4.99999 5.52505 4.99999H7.00005V2.04999ZM7.00005 1.04999H8.00005H9.47505C10.842 1.04999 11.95 2.15808 11.95 3.52499C11.95 4.33163 11.5642 5.04815 10.9669 5.49999C11.5642 5.95184 11.95 6.66836 11.95 7.475C11.95 8.8419 10.842 9.95 9.47505 9.95C8.92236 9.95 8.41198 9.76884 8.00005 9.46266V9.95L8.00005 11.425C8.00005 12.7919 6.89195 13.9 5.52505 13.9C4.15814 13.9 3.05005 12.7919 3.05005 11.425C3.05005 10.6183 3.43593 9.90184 4.03317 9.44999C3.43593 8.99814 3.05005 8.28163 3.05005 7.475C3.05005 6.66836 3.43594 5.95184 4.03319 5.5C3.43594 5.04815 3.05005 4.33163 3.05005 3.52499C3.05005 2.15808 4.15814 1.04999 5.52505 1.04999H7.00005ZM8.00005 2.04999V4.99999H9.47505C10.2897 4.99999 10.95 4.33961 10.95 3.52499C10.95 2.71037 10.2897 2.04999 9.47505 2.04999H8.00005ZM5.52505 8.94998H7.00005L7.00005 7.4788L7.00005 7.475L7.00005 7.4712V6H5.52505C4.71043 6 4.05005 6.66038 4.05005 7.475C4.05005 8.28767 4.70727 8.94684 5.5192 8.94999L5.52505 8.94998ZM4.05005 11.425C4.05005 10.6123 4.70727 9.95315 5.5192 9.94999L5.52505 9.95H7.00005L7.00005 11.425C7.00005 12.2396 6.33967 12.9 5.52505 12.9C4.71043 12.9 4.05005 12.2396 4.05005 11.425ZM8.00005 7.47206C8.00164 6.65879 8.66141 6 9.47505 6C10.2897 6 10.95 6.66038 10.95 7.475C10.95 8.28962 10.2897 8.95 9.47505 8.95C8.66141 8.95 8.00164 8.29121 8.00005 7.47794V7.47206Z"
+                                            fill="white"
+                                    />
+                                </svg>
+                                <span>Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="space-y-4">
+                    <h3 class="text-offwhite text-2xl mb-4">Contact Me</h3>
+                    <a href="http://github.com/msh31/" target="_blank" class="block mb-2">
+                        <div class="flex items-center justify-between text text-offwhite p-3 bg-bgaccent rounded hover:bg-[#252525] transition-colors cursor-pointer w-64">
+                            <div class="flex items-center space-x-2">
+                                <img src="assets/img/icons/GitHubLight.png" alt="GitHub" class="w-6 h-6" />
+                                <span>msh31</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="mailto:marco@marco007.dev" target="_self" class="block mb-2">
+                        <div class="flex items-center justify-between text-offwhite p-3 bg-bgaccent rounded hover:bg-[#252525] transition-colors cursor-pointer w-64">
+                            <div class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                </svg>
+                                <span>marco@marco007.dev</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://discordapp.com/users/386204172258770954" class="block mb-2">
+                        <div class="flex items-center justify-between text-offwhite p-3 bg-bgaccent rounded hover:bg-[#252525] transition-colors cursor-pointer w-64">
+                            <div class="flex items-center space-x-2">
+                                <img src="assets/img/icons/Discord.png" alt="Discord" class="w-6 h-6" />
+                                <span>mxrco007</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- About Me -->
+                <div class="text-offwhite space-y-4 md:col-span-2 lg:col-span-1">
+                    <p>I'm a first-year student based in <span class="text-[#f57905] specialcursor2">the Netherlands</span> where I currently study software development at Alfa-College.</p>
+                    <p>I enjoy creating programs that solve real-world problems. Along the way, I often pick up new skills or programming languages, I like taking a creative approach and always aim to come up with solutions that are logical, efficient, and user-friendly.</p>
+                    <p>Beyond programming, I'm curious about new technology and always looking for ways to develop myself further in a laid-back way whether that's through school projects, hobbies, or new challenges.</p>
+                    <p>In my free time I work on small side projects to learn new things. If I'm not programming you'll probably find me at the Mystery Box attempting to get a <span class="text-[#dd00ff] specialcursor">wonderweapon</span>.</p>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="mt-12 md:mt-24 px-4">
+                <h2 class="text-offwhite text-3xl md:text-4xl mb-6 md:mb-8 text-center font-medium">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+<!-- SaveManager -->
+                    <div class="w-full bg-bgaccent rounded-lg shadow-sm text-center">
+                        <a href="#">
+                            <img class="rounded-t-lg w-full h-56 object-contain bg-bgaccent" src="assets/img/casino.png" alt="Casino Game Preview" />
+                        </a>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-offwhite ">Marco's Casino</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-offwhite">Simple blackjack game made for a school assignment.</p>
+                            <a href="/casino" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-offwhite bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Try Demo
+                                <svg class="w-6 h-6 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+<!-- Rekensite -->
+                    <div class="w-full bg-bgaccent rounded-lg shadow-sm text-center">
+                        <a href="#">
+                            <img class="rounded-t-lg w-full h-56 object-contain bg-bgaccent" src="assets/img/rekensite.png" alt="Rekensite Preview" />
+                        </a>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-offwhite ">Arithmetic Web App</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-offwhite">A web app that aims to help people learn the basics of math.</p>
+                            <a href="/rekenen" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-offwhite bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Try Demo
+                                <svg class="w-6 h-6 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+<!-- Sortify -->
+                    <div class="w-full bg-bgaccent rounded-lg shadow-sm text-center">
+                        <a href="#">
+                            <img class="rounded-t-lg w-full h-56 object-contain bg-bgaccent" src="assets/img/sortify_preview.gif" alt="Sortify Preview" />
+                        </a>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-offwhite ">Sortify</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-offwhite">A simple and easy-to-use photo sorting application</p>
+                            <a href="https://github.com/msh31/Sortify" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-offwhite bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                View Project
+                                <svg class="w-6 h-6 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="w-full mt-auto text-center text-graycustom text-sm md:text-base bg-bgaccent py-0">
+            <div class="p-2 flex justify-center items-center">
+                <p class="text-xs md:text-sm">
+                    designed in <span class="font-bold text-offwhite">Figma</span>, built with <span class="font-bold text-offwhite">TailwindCSS</span> in
+                    <span class="font-bold text-offwhite">WebStorm</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>-->
+</body>
+</html>
