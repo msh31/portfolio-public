@@ -26,4 +26,4 @@ Feel free to fork this project and customize it for your own portfolio!
 
 ---
 
-⭐ Star this repo if you found it helpful! - Built with ❤️ by Marco
+Built with ❤️ by Marco
