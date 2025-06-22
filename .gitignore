@@ -9,13 +9,4 @@ src/demos
 package-lock.json
 /src/casino
 /src/rekenen
-
-# Environment and deployment files (not in public repo)
-.env
-.env.local
-.env.production
-docker-compose.yml
-docker-compose.override.yml
-/deployment/
-/server-configs/
-/nginx-conf/
+.dockerignore
