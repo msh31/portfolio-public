@@ -21,7 +21,7 @@ class ProjectManager {
                 image: "assets/img/casino.png",
                 category: "school",
                 technologies: ["HTML", "CSS", "JavaScript", "TailwindCSS"],
-                link: "/casino",
+                link: "https://casino.marco007.dev",
                 linkText: "Try Demo",
                 linkType: "demo"
             },
@@ -32,7 +32,7 @@ class ProjectManager {
                 image: "assets/img/rekensite.png",
                 category: "school",
                 technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-                link: "/rekenen",
+                link: "https://rekenen.marco007.dev",
                 linkText: "Try Demo",
                 linkType: "demo"
             },
