@@ -12,33 +12,37 @@
 </head>
 <body class="font-inter overflow-x-hidden h-full min-h-screen flex flex-col">
 
-<nav class="bg-bgaccent sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto px-4 py-3">
-        <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none text-gray-400 hover:text-perfectred transition-colors" aria-controls="navbar-dropdown" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-            </svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-background md:flex-row md:mt-0 md:border-0 md:bg-transparent">
-                <li>
-                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 cursor-pointer rounded-sm hover:text-perfectred md:hover:bg-transparent md:border-0 md:p-0 md:w-auto text-white transition-colors">Demos
-                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                        </svg></button>
-                    <div id="dropdownNavbar" class="z-10 hidden font-normal rounded-lg shadow-md w-44 bg-bgaccent">
-                        <ul class="py-2 text-sm text-graycustom" aria-labelledby="dropdownLargeButton">
-                            <li>
-                                <a href="https://casino.marco007.dev" class="block px-4 py-2 hover:bg-background hover:text-perfectred transition-colors">Marco's Casino</a>
-                            </li>
-                            <li>
-                                <a href="https://rekenen.marco007.dev" class="block px-4 py-2 hover:bg-background hover:text-perfectred transition-colors">Rekensite</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+<nav class="bg-bgaccent sticky top-0 z-50 backdrop-blur-sm bg-opacity-95 w-full">
+    <div class="max-w-screen-xl flex items-center justify-between mx-auto px-4 py-2">
+        <span class="text-white font-bold text-lg md:text-xl tracking-tight select-none mr-2">Marco H.</span>
+        <div class="hidden md:flex items-center space-x-1">
+            <!-- Demos Dropdown -->
+            <div class="relative" id="demos-dropdown-parent">
+                <button id="dropdownNavbarLink" type="button" class="flex items-center gap-1 px-3 py-1.5 rounded-sm text-sm font-medium text-white hover:text-perfectred focus:outline-none focus-visible:ring-2 focus-visible:ring-perfectred transition-colors cursor-pointer" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
+                    Demos
+                    <svg class="w-2.5 h-2.5 ms-1 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg>
+                </button>
+                <div id="dropdownNavbar" class="z-20 absolute left-0 mt-2 font-normal rounded-lg shadow-lg w-56 bg-bgaccent border border-gray-700/40 transition-all duration-200 hidden">
+                    <ul class="py-2 text-sm text-graycustom" aria-labelledby="dropdownNavbarLink">
+                        <li>
+                            <a href="https://casino.marco007.dev" class="flex items-center gap-3 px-4 py-2 hover:bg-background hover:text-perfectred transition-colors rounded-t-lg focus:bg-background focus:text-perfectred" target="_blank" rel="noopener noreferrer">
+                                <i class="devicon-javascript-plain text-xl"></i>
+                                <span>Casino <span class="ml-1 text-xs text-gray-400">(JavaScript)</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://rekenen.marco007.dev" class="flex items-center gap-3 px-4 py-2 hover:bg-background hover:text-perfectred transition-colors rounded-b-lg focus:bg-background focus:text-perfectred" target="_blank" rel="noopener noreferrer">
+                                <i class="devicon-php-plain text-xl"></i>
+                                <span>Rekensite <span class="ml-1 text-xs text-gray-400">(PHP)</span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Request CV Button -->
+            <a href="mailto:marco@marco007.dev?subject=Request%20for%20CV" class="ml-2 px-3 py-1.5 rounded bg-perfectred text-white text-sm font-medium hover:bg-red-600 transition-colors whitespace-nowrap">Request CV</a>
         </div>
     </div>
 </nav>
@@ -309,7 +313,7 @@
                 
                 <!-- Dynamic Project Container -->
                 <div id="projectContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-300">
-                    <!-- Projects will be dynamically inserted here -->
+                    <!-- dynamic -->
                 </div>
             </div>
         </section>
@@ -325,7 +329,6 @@
     </footer>
 </div>
 
-<!-- Scripts -->
 <script src="assets/js/carousel.js"></script>
 <script src="assets/js/script.js"></script>
 </body>

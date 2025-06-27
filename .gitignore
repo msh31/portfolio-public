@@ -10,3 +10,4 @@ package-lock.json
 /src/casino
 /src/rekenen
 .dockerignore
+archive
