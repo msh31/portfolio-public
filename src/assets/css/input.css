@@ -1,5 +1,4 @@
-/* Clean Portfolio CSS - Tailwind First Approach */
-/* Fonts */
+/* Clean Portfolio CSS - Simplified Version */
 @import url('https://fonts.cdnfonts.com/css/inter');
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
@@ -70,14 +69,85 @@
         #2a2a28;
 }
 
+/* Navbar Stability */
+nav {
+    min-height: 60px;
+}
+
+nav .max-w-screen-xl {
+    min-height: 56px;
+}
+
+/* Simple Dropdown Styles */
+.dropdown-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.dropdown-btn:hover {
+    background: rgba(255, 70, 70, 0.2);
+    border-color: rgba(255, 70, 70, 0.5);
+    box-shadow: 0 2px 8px rgba(255, 70, 70, 0.2);
+}
+
+.dropdown-menu {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.dropdown-menu:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown-arrow {
+    transition: transform 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 70, 70, 0.15) !important;
+    transition: all 0.2s ease;
+}
+
+/* Override Tailwind hover classes for dropdown items */
+.dropdown-item {
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 70, 70, 0.15) !important;
+}
+
+/* Language Toggle Button */
+#lang-toggle {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.2s ease;
+}
+
+#lang-toggle:hover {
+    background: rgba(255, 70, 70, 0.2);
+    border-color: rgba(255, 70, 70, 0.5);
+    box-shadow: 0 2px 8px rgba(255, 70, 70, 0.2);
+    color: #fff;
+}
+
+/* Request CV Button */
+.request-cv-btn:hover {
+    background: #e53e3e !important;
+    box-shadow: 0 2px 12px rgba(255, 70, 70, 0.4);
+}
+
 /* Animation Classes */
 .tech-card {
     position: relative;
     transform: translateY(20px);
     opacity: 0;
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
-    backdrop-filter: blur(10px);
+    transition: all 0.6s ease;
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .tech-card.animate-in {
@@ -86,30 +156,34 @@
 }
 
 .tech-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(255, 70, 70, 0.1);
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(255, 70, 70, 0.2);
+    background: rgba(255, 255, 255, 0.05);
 }
 
-.tech-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(135deg, rgba(255, 70, 70, 0.1), transparent, rgba(255, 70, 70, 0.05));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: subtract;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: subtract;
+/* Contact Cards Hover Effects */
+.contact-card {
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    background: rgba(255, 70, 70, 0.15) !important;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(255, 70, 70, 0.2);
+}
+
+/* Tech Stack Items Hover */
+.tech-item:hover {
+    background: rgba(255, 70, 70, 0.15) !important;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 70, 70, 0.3);
+    transition: all 0.2s ease;
 }
 
 .project-card {
     transform: translateY(30px);
     opacity: 0;
-    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.7s ease;
 }
 
 .project-card.animate-in {
@@ -118,10 +192,10 @@
 }
 
 .project-card:hover {
-    transform: translateY(-12px) scale(1.02);
+    transform: translateY(-15px) scale(1.03);
     box-shadow: 
         0 25px 50px rgba(0, 0, 0, 0.25),
-        0 12px 24px rgba(255, 70, 70, 0.1);
+        0 12px 24px rgba(255, 70, 70, 0.2);
 }
 
 /* Scroll indicator animation */
@@ -141,42 +215,27 @@
     }
 }
 
-/* Project Filter Styles - Clean Focus */
+/* Project Filter Styles */
 .project-filter {
     color: #B0B0B0;
     background: transparent;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
+    transition: all 0.2s ease;
 }
 
 .project-filter:hover {
     color: #F2F0EF;
-    background: rgba(255, 70, 70, 0.1);
+    background: rgba(255, 70, 70, 0.2);
+    box-shadow: 0 2px 8px rgba(255, 70, 70, 0.2);
 }
 
 .project-filter.active {
     color: #F2F0EF;
     background: #FF4646;
-    box-shadow: 0 4px 12px rgba(255, 70, 70, 0.3);
+    box-shadow: 0 2px 12px rgba(255, 70, 70, 0.4);
 }
 
-.project-filter::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transition: left 0.5s;
-}
-
-.project-filter:hover::before {
-    left: 100%;
-}
-
-/* Remove ALL focus outlines globally */
+/* Remove focus outlines */
 *:focus {
     outline: none !important;
     box-shadow: none !important;
@@ -194,17 +253,7 @@ a:focus {
     border: none !important;
 }
 
-/* Floating Animation for Tech Icons */
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-6px); }
-}
-
-.tech-card .flex.items-center.space-x-3:hover {
-    animation: float 2s ease-in-out infinite;
-}
-
-/* Responsive Enhancements */
+/* Responsive */
 @media (max-width: 768px) {
     .tech-card {
         margin-bottom: 1rem;
@@ -224,8 +273,7 @@ a:focus {
     .tech-card,
     .project-card,
     .scroll-indicator,
-    .hero-bg::before,
-    .tech-bg::after {
+    .hero-bg::before {
         animation: none;
     }
     

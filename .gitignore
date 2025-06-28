@@ -1,12 +1,10 @@
-﻿/node_modules
+﻿node_modules
 compile_css.cmd
 /.idea
-src/package-lock.json
-src/demos
-/src/archive
-/src/node_modules
-/src/assets/css/style.css
 package-lock.json
+/src/demos
+/src/archive
+/src/assets/css/style.css
 /src/casino
 /src/rekenen
 .dockerignore

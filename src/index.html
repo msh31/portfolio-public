@@ -12,37 +12,59 @@
 </head>
 <body class="font-inter overflow-x-hidden h-full min-h-screen flex flex-col">
 
-<nav class="bg-bgaccent sticky top-0 z-50 backdrop-blur-sm bg-opacity-95 w-full">
+<nav class="bg-bgaccent fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-opacity-95 border-b border-gray-700/40 shadow-lg">
     <div class="max-w-screen-xl flex items-center justify-between mx-auto px-4 py-2">
-        <span class="text-white font-bold text-lg md:text-xl tracking-tight select-none mr-2">Marco H.</span>
-        <div class="hidden md:flex items-center space-x-1">
+        <span class="text-white font-bold text-lg md:text-xl tracking-tight select-none">Marco H.</span>
+        <div class="hidden md:flex items-center space-x-6">
             <!-- Demos Dropdown -->
-            <div class="relative" id="demos-dropdown-parent">
-                <button id="dropdownNavbarLink" type="button" class="flex items-center gap-1 px-3 py-1.5 rounded-sm text-sm font-medium text-white hover:text-perfectred focus:outline-none focus-visible:ring-2 focus-visible:ring-perfectred transition-colors cursor-pointer" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
+            <div class="relative">
+                <button id="dropdownNavbarLink" type="button" class="dropdown-btn flex items-center gap-2 px-4 py-2 text-sm font-medium text-white hover:text-perfectred focus:outline-none transition-colors cursor-pointer" aria-haspopup="true" aria-expanded="false">
                     Demos
-                    <svg class="w-2.5 h-2.5 ms-1 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <svg class="dropdown-arrow w-4 h-4 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                     </svg>
                 </button>
-                <div id="dropdownNavbar" class="z-20 absolute left-0 mt-2 font-normal rounded-lg shadow-lg w-56 bg-bgaccent border border-gray-700/40 transition-all duration-200 hidden">
-                    <ul class="py-2 text-sm text-graycustom" aria-labelledby="dropdownNavbarLink">
-                        <li>
-                            <a href="https://casino.marco007.dev" class="flex items-center gap-3 px-4 py-2 hover:bg-background hover:text-perfectred transition-colors rounded-t-lg focus:bg-background focus:text-perfectred" target="_blank" rel="noopener noreferrer">
-                                <i class="devicon-javascript-plain text-xl"></i>
-                                <span>Casino <span class="ml-1 text-xs text-gray-400">(JavaScript)</span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://rekenen.marco007.dev" class="flex items-center gap-3 px-4 py-2 hover:bg-background hover:text-perfectred transition-colors rounded-b-lg focus:bg-background focus:text-perfectred" target="_blank" rel="noopener noreferrer">
-                                <i class="devicon-php-plain text-xl"></i>
-                                <span>Rekensite <span class="ml-1 text-xs text-gray-400">(PHP)</span></span>
-                            </a>
-                        </li>
-                    </ul>
+                <div id="dropdownNavbar" class="dropdown-menu hidden absolute left-0 mt-2 w-64 bg-bgaccent rounded-xl shadow-xl py-3 border border-gray-700/40 z-50 backdrop-blur-sm">
+                    <div class="px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider border-b border-gray-700/40 mb-2">
+                        Live Projects
+                    </div>
+                    <a href="https://casino.marco007.dev" target="_blank" class="dropdown-item flex items-center gap-3 px-4 py-3 text-offwhite hover:bg-[#232323] transition-all duration-200 cursor-pointer group">
+                        <div class="tech-icon-container flex-shrink-0 w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center group-hover:bg-yellow-500/30 transition-colors">
+                            <i class="devicon-javascript-plain text-yellow-400 text-lg"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="font-medium">Marco's Casino</div>
+                            <div class="text-xs text-gray-400">JavaScript • Game</div>
+                        </div>
+                        <svg class="external-link-icon w-4 h-4 text-gray-500 group-hover:text-gray-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                    <a href="https://rekenen.marco007.dev" target="_blank" class="dropdown-item flex items-center gap-3 px-4 py-3 text-offwhite hover:bg-[#232323] transition-all duration-200 cursor-pointer group">
+                        <div class="tech-icon-container flex-shrink-0 w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
+                            <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"/>
+                                <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <div class="font-medium">Math Learning App</div>
+                            <div class="text-xs text-gray-400">Bootstrap • Education</div>
+                        </div>
+                        <svg class="external-link-icon w-4 h-4 text-gray-500 group-hover:text-gray-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
+            
+            <!-- Language Toggle -->
+            <button id="lang-toggle" class="px-3 py-1.5 rounded bg-gray-600 text-white text-sm font-medium hover:bg-gray-500 transition-colors">
+                <span id="lang-toggle-label">NL</span>
+            </button>
+            
             <!-- Request CV Button -->
-            <a href="mailto:marco@marco007.dev?subject=Request%20for%20CV" class="ml-2 px-3 py-1.5 rounded bg-perfectred text-white text-sm font-medium hover:bg-red-600 transition-colors whitespace-nowrap">Request CV</a>
+            <a href="mailto:marco@marco007.dev?subject=Request%20for%20CV" class="request-cv-btn ml-2 px-3 py-1.5 rounded bg-perfectred text-white text-sm font-medium hover:bg-red-600 transition-colors whitespace-nowrap">Request CV</a>
         </div>
     </div>
 </nav>
@@ -53,14 +75,14 @@
         <section class="min-h-screen flex flex-col justify-center items-center px-4 py-16 md:py-24 hero-bg relative pb-20">
             <div class="max-w-6xl mx-auto text-center flex-grow flex flex-col justify-center">
                 <div class="space-y-6 md:space-y-8">
-                    <h1 class="text-offwhite font-apple text-5xl md:text-7xl lg:text-8xl">
+                    <h1 class="text-offwhite font-apple text-5xl md:text-7xl lg:text-8xl" data-i18n="heroTitle">
                         Hi, I'm <span class="text-perfectred">Marco</span>.
                     </h1>
-                    <h2 class="text-neutral-400 text-xl md:text-2xl lg:text-3xl font-light">
+                    <h2 class="text-neutral-400 text-xl md:text-2xl lg:text-3xl font-light" data-i18n="heroSubtitle">
                         Software Engineering Student
                     </h2>
-                    <p class="text-graycustom text-lg md:text-l max-w-3xl mx-auto leading-relaxed">
-                        First-year student from the Netherlands, passionate about creating solutions and learning new technologies
+                    <p class="text-graycustom text-lg md:text-l max-w-3xl mx-auto leading-relaxed" data-i18n="heroDesc">
+                        Student from the Netherlands, passionate about creating solutions and learning new technologies
                     </p>
                 </div>
             </div>
@@ -68,7 +90,7 @@
             <!-- Scroll Indicator -->
             <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 scroll-indicator">
                 <div class="flex flex-col items-center text-graycustom">
-                    <span class="text-sm mb-2">Scroll down</span>
+                    <span class="text-sm mb-2" data-i18n="scrollDown">Scroll down</span>
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
                     </svg>
@@ -77,24 +99,24 @@
         </section>
 
         <!-- About Section -->
-        <section class="py-16 md:py-24 px-4 section-bg">
+        <section class="py-16 md:py-24 px-4 section-bg about-section">
             <div class="max-w-6xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                <div class="about-grid grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                     <div class="space-y-6">
-                        <h2 class="text-offwhite text-3xl md:text-4xl font-medium">About Me</h2>
+                        <h2 class="text-offwhite text-3xl md:text-4xl font-medium" data-i18n="aboutTitle">About Me</h2>
                         <div class="space-y-4 text-graycustom text-lg leading-relaxed">
-                            <p>I'm a first-year student based in <span class="text-[#f57905] specialcursor2">the Netherlands</span> where I currently study software development at Alfa-College.</p>
-                            <p>I enjoy creating programs that solve real-world problems. Along the way, I often pick up new skills or programming languages, I like taking a creative approach and always aim to come up with solutions that are logical, efficient, and user-friendly.</p>
-                            <p>Beyond programming, I'm curious about new technology and always looking for ways to develop myself further in a laid-back way whether that's through school projects, hobbies, or new challenges.</p>
-                            <p>In my free time I work on small side projects to learn new things. If I'm not programming you'll probably find me at the Mystery Box attempting to get a <span class="text-[#dd00ff] specialcursor">wonderweapon</span>.</p>
+                            <p data-i18n="about1">I'm a student based in <span class="text-[#f57905] specialcursor2">the Netherlands</span> where I currently study software development at Alfa-College.</p>
+                            <p data-i18n="about2">I enjoy creating programs that solve real-world problems. Along the way, I often pick up new skills or programming languages, I like taking a creative approach and always aim to come up with solutions that are logical, efficient, and user-friendly.</p>
+                            <p data-i18n="about3">Beyond programming, I'm curious about new technology whether it's software or hardware related and I'm always looking for ways to develop myself further.</p>
+                            <p data-i18n="about4">In my free time I like to work on small side projects to learn new things. If I'm not programming you'll probably find me at the Mystery Box attempting to get a <span class="text-[#dd00ff] specialcursor">wonderweapon</span>.</p>
                         </div>
                     </div>
                     
                     <!-- Contact Cards -->
                     <div class="space-y-4">
-                        <h3 class="text-offwhite text-2xl font-medium mb-6">Get In Touch</h3>
+                        <h3 class="text-offwhite text-2xl font-medium mb-6" data-i18n="contactTitle">Get In Touch</h3>
                         <a href="http://github.com/msh31/" target="_blank" class="block">
-                            <div class="flex items-center justify-between text-offwhite p-4 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="contact-card flex items-center justify-between text-offwhite p-4 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <div class="flex items-center space-x-3">
                                     <img src="assets/img/icons/GitHubLight.png" alt="GitHub" class="w-6 h-6" />
                                     <span class="text-lg">msh31</span>
@@ -105,7 +127,7 @@
                             </div>
                         </a>
                         <a href="mailto:marco@marco007.dev" target="_self" class="block">
-                            <div class="flex items-center justify-between text-offwhite p-4 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="contact-card flex items-center justify-between text-offwhite p-4 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <div class="flex items-center space-x-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
@@ -118,7 +140,7 @@
                             </div>
                         </a>
                         <a href="https://discordapp.com/users/386204172258770954" class="block">
-                            <div class="flex items-center justify-between text-offwhite p-4 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="contact-card flex items-center justify-between text-offwhite p-4 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <div class="flex items-center space-x-3">
                                     <img src="assets/img/icons/Discord.png" alt="Discord" class="w-6 h-6" />
                                     <span class="text-lg">mxrco007</span>
@@ -136,46 +158,43 @@
         <!-- Skills Section -->
         <section class="py-16 md:py-24 px-4 tech-bg">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-offwhite text-3xl md:text-4xl font-medium text-center mb-12">Tech Stack</h2>
+                <h2 class="text-offwhite text-3xl md:text-4xl font-medium text-center mb-12" data-i18n="skillsTitle">Tech Stack</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Programming Languages -->
                     <div class="bg-background p-6 rounded-xl border border-gray-600/20 tech-card flex flex-col min-h-[26rem]">
                         <div class="flex items-center justify-center mb-4">
                             <div class="w-12 h-12 bg-perfectred/10 rounded-lg flex items-center justify-center">
-                                <!-- <svg class="w-6 h-6 text-perfectred" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg> -->
                                 <a class="text-2xl">🧠</a>
                             </div>
                         </div>
-                        <h3 class="text-perfectred text-xl font-medium text-center mb-6">Languages</h3>
+                        <h3 class="text-perfectred text-xl font-medium text-center mb-6" data-i18n="languages">Languages</h3>
                         <div class="grid grid-cols-2 gap-2 flex-grow">
-                            <div class="flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <svg class="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256" style="fill:#FFFFFF;">
                                     <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,2c-0.71484,0 -1.42969,0.17969 -2.06641,0.53906l-16.84375,9.46484c-1.28906,0.72266 -2.08984,2.07813 -2.08984,3.53125v18.92969c0,1.45313 0.80078,2.80859 2.08984,3.53125l16.84375,9.46484c0.63672,0.35938 1.35156,0.53906 2.06641,0.53906c0.71484,0 1.42969,-0.17969 2.06641,-0.53906l16.84375,-9.46094c1.28906,-0.72656 2.08984,-2.08203 2.08984,-3.53516v-18.92969c0,-1.45312 -0.80078,-2.80859 -2.08984,-3.53125l-16.84375,-9.46484c-0.63672,-0.35937 -1.35156,-0.53906 -2.06641,-0.53906zM25,13c3.78125,0 7.27734,1.75391 9.54297,4.73828l-4.38281,2.53906c-1.31641,-1.44141 -3.1875,-2.27734 -5.16016,-2.27734c-3.85937,0 -7,3.14063 -7,7c0,3.85938 3.14063,7 7,7c1.97266,0 3.84375,-0.83594 5.16016,-2.27734l4.38281,2.53906c-2.26562,2.98438 -5.76172,4.73828 -9.54297,4.73828c-6.61719,0 -12,-5.38281 -12,-12c0,-6.61719 5.38281,-12 12,-12zM35,20h2v2h2v-2h2v2h2v2h-2v2h2v2h-2v2h-2v-2h-2v2h-2v-2h-2v-2h2v-2h-2v-2h2zM37,24v2h2v-2z"></path></g></g>
                                 </svg>
                                 <span class="text-sm">C#</span>
                             </div>
-                            <div class="flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <i class="devicon-javascript-plain text-xl flex-shrink-0"></i>
                                 <span class="text-sm">JavaScript</span>
                             </div>
-                            <div class="flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <svg class="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50" style="fill:#FFFFFF;">
                                     <path d="M 25 12 C 11.542969 12 1 17.710938 1 25 C 1 32.289063 11.542969 38 25 38 C 38.457031 38 49 32.289063 49 25 C 49 17.710938 38.457031 12 25 12 Z M 22.507813 16 L 25.128906 16 L 24.296875 20 L 26.636719 20 C 28.121094 20 29.117188 20.207031 29.683594 20.726563 C 30.238281 21.238281 30.40625 22.078125 30.183594 23.222656 L 29.144531 28 L 26.480469 28 L 27.4375 23.582031 C 27.554688 22.976563 27.507813 22.554688 27.304688 22.332031 C 27.101563 22.109375 26.65625 22 25.988281 22 L 23.890625 22 L 22.625 28 L 20 28 Z M 11 20 L 16.332031 20 C 18.875 20 20.414063 21.703125 19.8125 24.246094 C 19.113281 27.199219 17.238281 28 13.792969 28 L 12.144531 28 L 11.621094 31 L 8.972656 31 Z M 32 20 L 37.332031 20 C 39.875 20 41.414063 21.703125 40.8125 24.246094 C 40.113281 27.199219 38.238281 28 34.792969 28 L 33.144531 28 L 32.621094 31 L 29.972656 31 Z M 13.269531 22 L 12.515625 26 L 14.226563 26 C 15.707031 26 17.082031 25.832031 17.3125 23.625 C 17.398438 22.769531 17.042969 22 15.332031 22 Z M 34.269531 22 L 33.515625 26 L 35.226563 26 C 36.707031 26 38.082031 25.832031 38.3125 23.625 C 38.398438 22.769531 38.042969 22 36.332031 22 Z"></path>
                                 </svg>
                                 <span class="text-sm">PHP</span>
                             </div>
-                            <div class="flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <i class="devicon-go-original-wordmark text-xl flex-shrink-0"></i>
                                 <span class="text-sm">Go</span>
                             </div>
-                            <div class="flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <i class="devicon-c-plain-wordmark text-xl"></i>
                                 <span class="text-sm">C</span>
                             </div>
-                            <div class="flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-2 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <svg class="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" id="mdi-language-lua" fill="white" viewBox="0 0 24 24"><path d="M10.5,5A8.5,8.5 0 0,0 2,13.5A8.5,8.5 0 0,0 10.5,22A8.5,8.5 0 0,0 19,13.5A8.5,8.5 0 0,0 10.5,5M13.5,13A2.5,2.5 0 0,1 11,10.5A2.5,2.5 0 0,1 13.5,8A2.5,2.5 0 0,1 16,10.5A2.5,2.5 0 0,1 13.5,13M19.5,2A2.5,2.5 0 0,0 17,4.5A2.5,2.5 0 0,0 19.5,7A2.5,2.5 0 0,0 22,4.5A2.5,2.5 0 0,0 19.5,2" /></svg>
                                 <span class="text-sm">Lua</span>
                             </div>
@@ -186,30 +205,27 @@
                     <div class="bg-background p-6 rounded-xl border border-gray-600/20 tech-card flex flex-col min-h-[26rem]">
                         <div class="flex items-center justify-center mb-4">
                             <div class="w-12 h-12 bg-perfectred/10 rounded-lg flex items-center justify-center">
-                                <!-- <svg class="w-6 h-6 text-perfectred" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
-                                </svg> -->
                                 <a class="text-2xl">🎨</a>
                             </div>
                         </div>
-                        <h3 class="text-perfectred text-xl font-medium text-center mb-6">Frameworks & Styling</h3>
+                        <h3 class="text-perfectred text-xl font-medium text-center mb-6" data-i18n="frameworks">Frameworks & Styling</h3>
                         <div class="space-y-3 flex-grow flex flex-col justify-start">
-                            <div class="flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <i class="devicon-tailwindcss-original text-xl flex-shrink-0"></i>
                                 <span class="text-sm">TailwindCSS</span>
                             </div>
-                            <div class="flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bootstrap-fill flex-shrink-0" viewBox="0 0 16 16">
                                     <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"/>
                                     <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"/>
                                 </svg>
                                 <span class="text-sm">Bootstrap</span>
                             </div>
-                            <div class="flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <i class="devicon-nextjs-original-wordmark text-xl"></i>
                                 <span class="text-sm">Next.js</span>
                             </div>
-                            <div class="flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <i class="devicon-astro-plain text-xl"></i>
                                 <span class="text-sm">Astro</span>
                             </div>
@@ -220,28 +236,24 @@
                     <div class="bg-background p-6 rounded-xl border border-gray-600/20 tech-card flex flex-col min-h-[26rem]">
                         <div class="flex items-center justify-center mb-4">
                             <div class="w-12 h-12 bg-perfectred/10 rounded-lg flex items-center justify-center">
-                                <!-- <svg class="w-6 h-6 text-perfectred" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"/>
-                                    <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V9a1 1 0 00-1-1h-1v4.5a1.5 1.5 0 01-3 0V8a1 1 0 011-1z"/>
-                                </svg> -->
                                 <a class="text-2xl">🖥️</a>
                             </div>
                         </div>
-                        <h3 class="text-perfectred text-xl font-medium text-center mb-6">OS Experience</h3>
+                        <h3 class="text-perfectred text-xl font-medium text-center mb-6" data-i18n="os">OS Experience</h3>
                         <div class="space-y-3 flex-grow flex flex-col justify-start">
-                            <div class="flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <i class="devicon-fedora-plain text-xl flex-shrink-0"></i>
                                 <span class="text-sm">Fedora (Atomic)</span>
                             </div>
-                            <div class="flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <i class="devicon-ubuntu-plain text-xl flex-shrink-0"></i>
                                 <span class="text-sm">Ubuntu (server)</span>
                             </div>
-                            <div class="flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <i class="devicon-windows11-original text-xl flex-shrink-0"></i>
                                 <span class="text-sm">Windows (server)</span>
                             </div>
-                            <div class="flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
+                            <div class="tech-item flex items-center space-x-3 text-offwhite p-3 bg-bgaccent rounded-lg hover:bg-[#252525] transition-all duration-300 hover:scale-105">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
                                     <g fill="#f0f0f0" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M46.125,38.868c-0.192,-0.815 -0.481,-1.618 -0.919,-2.346c-0.871,-1.466 -2.199,-2.585 -3.594,-3.489c-1.409,-0.901 -2.916,-1.624 -4.458,-2.219c-2.953,-1.141 -2.81,-1.103 -4.803,-1.814c-4.416,-1.574 -6.868,-3.914 -7.022,-6.452c-0.074,-1.229 1.126,-5.234 6.074,-4.282c1.175,0.226 2.287,0.543 3.382,1.037c1.009,0.456 3.954,1.884 4.986,3.917v0c0.078,0.897 0.394,1.244 1.656,1.84c0.949,0.448 1.907,0.935 1.993,2.039c0.005,0.06 0.051,0.109 0.131,0.121c0.052,0 0.1,-0.031 0.121,-0.081c0.182,-0.439 0.915,-0.989 1.461,-0.839c0.063,0.016 0.119,-0.009 0.148,-0.061c0.03,-0.052 0.02,-0.116 -0.021,-0.158l-0.863,-0.854c-0.311,-0.31 -0.651,-0.721 -0.939,-1.249c-0.078,-0.142 -0.145,-0.282 -0.204,-0.417c-0.038,-0.094 -0.076,-0.187 -0.114,-0.281c-0.724,-1.895 -2.073,-3.925 -3.465,-5.24c-0.756,-0.727 -1.588,-1.367 -2.475,-1.913c-0.891,-0.538 -1.819,-1.016 -2.833,-1.302l-0.074,0.256c0.947,0.327 1.833,0.849 2.662,1.419c0.828,0.579 1.593,1.243 2.273,1.979c0.971,1.032 1.736,2.23 2.282,3.512l-1.993,-2.477l0.055,0.858l-1.633,-1.841l0.101,0.862l-1.586,-1.279l0.136,0.584c-0.357,-0.236 -3.525,-1.496 -5.106,-2.09c-1.581,-0.594 -4.705,-3.524 -3.804,-7.232c0,0 -1.477,-0.574 -2.535,-0.965c-1.043,-0.376 -2.09,-0.717 -3.14,-1.046c-2.1,-0.658 -4.212,-1.258 -6.335,-1.818c-2.123,-0.557 -4.26,-1.062 -6.409,-1.508c-2.15,-0.441 -4.312,-0.834 -6.5,-1.053l-0.039,0.333c2.153,0.331 4.278,0.833 6.387,1.382c2.108,0.555 4.202,1.166 6.279,1.829c2.076,0.665 4.139,1.37 6.177,2.128c1.018,0.379 2.033,0.769 3.027,1.188c0.211,0.088 0.426,0.18 0.641,0.272c-1.224,-0.241 -2.448,-0.432 -3.673,-0.591c-2.211,-0.281 -4.424,-0.458 -6.639,-0.558c-2.214,-0.1 -4.43,-0.116 -6.642,-0.034c-2.211,0.086 -4.423,0.259 -6.605,0.633l0.043,0.304c2.18,-0.224 4.375,-0.246 6.563,-0.183c2.189,0.067 4.374,0.231 6.547,0.477c2.172,0.246 4.335,0.567 6.469,0.986c1.316,0.261 2.624,0.564 3.903,0.921c-1.011,-0.101 -2.017,-0.127 -3.014,-0.115c-1.977,0.03 -3.926,0.247 -5.848,0.574c-1.922,0.33 -3.818,0.773 -5.675,1.346c-1.851,0.579 -3.681,1.267 -5.361,2.249l0.116,0.208c1.72,-0.828 3.568,-1.358 5.426,-1.779c1.862,-0.414 3.751,-0.698 5.644,-0.868c1.891,-0.168 3.792,-0.224 5.663,-0.101c1.664,0.11 3.317,0.363 4.83,0.849v0c0.065,0.445 0.366,1.346 0.511,1.796v0c-4.255,1.957 -4.794,5.477 -4.446,7.365c0.409,2.214 2.011,3.902 3.904,4.995c1.567,0.891 3.168,1.459 4.726,2.047c1.555,0.583 3.095,1.143 4.467,1.918c1.352,0.747 2.476,1.901 3.391,3.21c1.837,2.638 2.572,5.964 2.792,9.245l0.365,-0.01c0.008,-3.323 -0.47,-6.802 -2.252,-9.812c-0.588,-0.986 -1.314,-1.921 -2.171,-2.733c0.992,0.384 1.961,0.818 2.887,1.333c1.373,0.779 2.667,1.749 3.548,3.051c0.444,0.647 0.755,1.375 0.983,2.133c0.202,0.767 0.295,1.565 0.329,2.371h0.312c0.011,-0.823 -0.035,-1.655 -0.201,-2.477z"></path></g></g>
                                 </svg>
@@ -256,35 +268,29 @@
                     <div class="bg-background p-6 rounded-xl border border-gray-600/20 tech-card flex flex-col min-h-[14rem]">
                         <div class="flex items-center justify-center mb-4">
                             <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                                <!-- <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg> -->
                                 <a class="text-2xl">🎓</a>
                             </div>
                         </div>
-                        <h3 class="text-blue-400 text-xl font-medium text-center mb-4">Currently Learning</h3>
+                        <h3 class="text-blue-400 text-xl font-medium text-center mb-4" data-i18n="learningTitle">Currently Learning</h3>
                         <div class="flex flex-wrap justify-center gap-2 flex-grow items-start">
-                            <span class="px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">Next.js</span>
-                            <span class="px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">Astro</span>
-                            <span class="px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">C</span>
-                            <span class="px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">PHP</span>
+                            <span class="tech-item px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">Next.js</span>
+                            <span class="tech-item px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">Astro</span>
+                            <span class="tech-item px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">C</span>
+                            <span class="tech-item px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">PHP</span>
                         </div>
                     </div>
                     <div class="bg-background p-6 rounded-xl border border-gray-600/20 tech-card flex flex-col min-h-[14rem]">
                         <div class="flex items-center justify-center mb-4">
                             <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center">
-                                <!-- <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L10.586 9.5 9.293 10.793a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"/>
-                                </svg> -->
                                 <a class="text-2xl">🚀</a>
                             </div>
                         </div>
-                        <h3 class="text-green-400 text-xl font-medium text-center mb-4">Future Goals</h3>
+                        <h3 class="text-green-400 text-xl font-medium text-center mb-4" data-i18n="futureTitle">Future Goals</h3>
                         <div class="flex flex-wrap justify-center gap-2 flex-grow items-start">
-                            <span class="px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">Assembly</span>
-                            <span class="px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">C++</span>
-                            <span class="px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">Cybersecurity</span>
-                            <span class="px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">Malware Analysis</span>
+                            <span class="tech-item px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">Assembly</span>
+                            <span class="tech-item px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">C++</span>
+                            <span class="tech-item px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">Cybersecurity</span>
+                            <span class="tech-item px-3 py-1.5 bg-bgaccent text-offwhite rounded-full text-sm hover:bg-[#252525] transition-colors">Malware Analysis</span>
                         </div>
                     </div>
                 </div>
@@ -294,19 +300,19 @@
         <!-- Projects Section -->
         <section class="py-16 md:py-24 px-4 section-bg">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-offwhite text-3xl md:text-4xl font-medium text-center mb-8">Featured Projects</h2>
+                <h2 class="text-offwhite text-3xl md:text-4xl font-medium text-center mb-8" data-i18n="featuredProjects">Featured Projects</h2>
                 
                 <!-- Project Category Filters -->
                 <div class="flex justify-center mb-8">
                     <div class="bg-bgaccent rounded-lg p-1 inline-flex">
-                        <button class="project-filter active px-6 py-2 rounded-md text-sm font-medium transition-colors outline-none border-none focus:outline-none focus:border-none" data-category="all">
-                            All Projects
+                        <button class="project-filter active px-6 py-2 rounded-md text-sm font-medium transition-colors outline-none border-none focus:outline-none focus:border-none" data-category="all" data-i18n="allProjects">
+                            <span data-i18n="allProjects">All Projects</span>
                         </button>
-                        <button class="project-filter px-6 py-2 rounded-md text-sm font-medium transition-colors outline-none border-none focus:outline-none focus:border-none" data-category="personal">
-                            Personal
+                        <button class="project-filter px-6 py-2 rounded-md text-sm font-medium transition-colors outline-none border-none focus:outline-none focus:border-none" data-category="personal" data-i18n="personal">
+                            <span data-i18n="personal">Personal</span>
                         </button>
-                        <button class="project-filter px-6 py-2 rounded-md text-sm font-medium transition-colors outline-none border-none focus:outline-none focus:border-none" data-category="school">
-                            School
+                        <button class="project-filter px-6 py-2 rounded-md text-sm font-medium transition-colors outline-none border-none focus:outline-none focus:border-none" data-category="school" data-i18n="school">
+                            <span data-i18n="school">School</span>
                         </button>
                     </div>
                 </div>
@@ -322,13 +328,14 @@
     <footer class="w-full text-center text-graycustom bg-bgaccent py-3">
         <div class="max-w-6xl mx-auto px-4">
             <p class="text-sm">
-                Designed in <span class="font-bold text-offwhite">Figma</span>, built with <span class="font-bold text-offwhite">TailwindCSS</span> in
+                <span data-i18n="footerDesigned">Designed in</span> <span class="font-bold text-offwhite">Figma</span>, <span data-i18n="footerBuilt">built with</span> <span class="font-bold text-offwhite">TailwindCSS</span> <span data-i18n="footerIn">in</span>
                 <span class="font-bold text-offwhite">WebStorm</span>
             </p>
         </div>
     </footer>
 </div>
 
+<script src="assets/js/translations.js"></script>
 <script src="assets/js/carousel.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
