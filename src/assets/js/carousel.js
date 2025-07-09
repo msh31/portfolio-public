@@ -90,7 +90,29 @@ class ProjectManager {
                 link: "https://github.com/msh31/rsync-manager",
                 linkText: "View Project",
                 linkType: "github"
-            }
+            },
+            {
+                id: 8,
+                title: "Port Scanner",
+                description: "high performance port scanner written in C++ as a learning project",
+                image: "assets/img/soon.png",
+                category: "personal",
+                technologies: ["C++"],
+                link: "https://github.com/msh31/port-scanner",
+                linkText: "View Project",
+                linkType: "github"
+            },
+            {
+                id: 9,
+                title: "text-based game (WIP)",
+                description: "A silly game written in C++ designed to help me learn about memory manipulation",
+                image: "assets/img/soon.png",
+                category: "personal",
+                technologies: ["C++"],
+                link: "https://github.com/msh31/memory-target-game",
+                linkText: "View Project",
+                linkType: "github"
+            },
         ];
     }
 

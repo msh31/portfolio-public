@@ -1,6 +1,6 @@
 const translations = {
     en: {
-        heroTitle: "Hi, I'm <span class=\"text-perfectred\">Marco</span>.",
+        heroTitle: "Hi, I'm <span class=\"text-perfectred\">Marco</span>...",
         heroSubtitle: "Software Engineering Student",
         heroDesc: "Student from the Netherlands, passionate about creating solutions and learning new technologies",
         aboutTitle: "About Me",
@@ -38,7 +38,7 @@ const translations = {
         footerIn: "in",
     },
     nl: {
-        heroTitle: "Hoi, ik ben <span class=\"text-perfectred\">Marco</span>.",
+        heroTitle: "Hoi, ik ben <span class=\"text-perfectred\">Marco</span>...",
         heroSubtitle: "Software Engineering Student",
         heroDesc: "Student uit Nederland, gepassioneerd over het maken van oplossingen en het leren van nieuwe technologieën",
         aboutTitle: "Over Mij",
