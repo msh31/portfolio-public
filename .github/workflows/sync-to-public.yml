@@ -16,10 +16,14 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.PUBLIC_REPO_TOKEN }}
 
-      - name: Remove .github directory (don't sync workflows)
+      - name: Remove sensitive files/directories
         run: |
           rm -rf .github
-          echo "Removed .github directory - workflows won't be synced"
+          rm -f docker-compose.yml
+          rm -f .dockerignore
+          rm -rf src/nginx-conf
+          rm -f compile.bat
+          echo "Removed sensitive files - these won't be synced"
 
       - name: Configure Git
         run: |
@@ -31,10 +35,14 @@ jobs:
           curl -f -H "Authorization: token ${{ secrets.PUBLIC_REPO_TOKEN }}" \
             https://api.github.com/repos/msh31/portfolio-public
 
-      - name: Create temporary branch for sync
+      - name: Get commit message from private repo
+        id: get_commit_message
+        run: echo "COMMIT_MSG=$(git log -1 --pretty=%B)" >> $GITHUB_ENV
+
+      - name: Create commit for sync
         run: |
           git add .
-          git commit -m "Sync from private repo (excluding workflows)" || echo "No changes to commit"
+          git commit -m "${{ env.COMMIT_MSG }}" || echo "No changes to commit"
 
       - name: Push to public repository
         run: |
@@ -42,5 +50,4 @@ jobs:
           git push public-repo HEAD:main --force --verbose
 
       - name: Verify sync
-        run: |
-          echo "✅ Successfully synced to public repository (excluding .github)"
+        run: echo "✅ Successfully synced to public repository (excluding sensitive files)"
