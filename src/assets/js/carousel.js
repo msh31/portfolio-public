@@ -38,19 +38,19 @@ class ProjectManager {
             },
             {
                 id: 3,
-                title: "Sortify",
-                description: "A simple and easy-to-use photo sorting application built with modern desktop technologies.",
-                image: "assets/img/sortify_preview.gif",
+                title: "Aetherbound",
+                description: "A simple 2D platformer where you play as Spark, on a quest to rekindle ancient Light Beacons. Navigate a world consumed by encroaching darkness and uncover hidden paths, purify corrupted enemies, and ultimately push back the gloom.",
+                image: "assets/img/soon.png",
                 category: "personal",
-                technologies: ["C#", ".NET 9", "AvaloniaUI"],
-                link: "https://github.com/msh31/Sortify",
+                technologies: ["C++", "Raylib"],
+                link: "https://github.com/msh31/aetherbound",
                 linkText: "View Project",
                 linkType: "github"
             },
             {
                 id: 4,
                 title: "Caesar Cipher",
-                description: "A Caesar cipher encrypt/decrypt CLI tool written in C",
+                description: "A Caesar cipher encrypt/decrypt CLI tool, a simple intro to cryptography.",
                 image: "assets/img/caesar-cipher.png",
                 category: "personal",
                 technologies: ["C"],
@@ -61,7 +61,7 @@ class ProjectManager {
             {
                 id: 5,
                 title: "kaprekar's constant",
-                description: "An implementation of kaprekar's constant written in Go",
+                description: "An implementation of kaprekar's constant",
                 image: "assets/img/kaprekar.png",
                 category: "personal",
                 technologies: ["Go"],
@@ -82,19 +82,8 @@ class ProjectManager {
             },
             {
                 id: 7,
-                title: "Rsync Manager (WIP)",
-                description: "A modern web-based GUI for managing rsync operations",
-                image: "assets/img/soon.png",
-                category: "personal",
-                technologies: ["Next.JS", "Typescript", "TailwindCSS", "Rsync", "Docker"],
-                link: "https://github.com/msh31/rsync-manager",
-                linkText: "View Project",
-                linkType: "github"
-            },
-            {
-                id: 8,
                 title: "Port Scanner",
-                description: "high performance port scanner written in C++ as a learning project",
+                description: "high performance port scanner written as a learning project for C++ & networking concepts",
                 image: "assets/img/soon.png",
                 category: "personal",
                 technologies: ["C++"],
@@ -103,16 +92,27 @@ class ProjectManager {
                 linkType: "github"
             },
             {
-                id: 9,
-                title: "text-based game (WIP)",
-                description: "A silly game written in C++ designed to help me learn about memory manipulation",
-                image: "assets/img/soon.png",
+                id: 8,
+                title: "fs-intelligence",
+                description: "Demonstration of Windows file system reconnaissance and data discovery techniques used by malware.",
+                image: "assets/img/fsintel-preview.png",
                 category: "personal",
                 technologies: ["C++"],
-                link: "https://github.com/msh31/memory-target-game",
+                link: "https://github.com/msh31/fs-intelligence",
                 linkText: "View Project",
                 linkType: "github"
             },
+            {
+                id: 9,
+                title: "Sortify",
+                description: "A simple and easy-to-use photo sorting application built with modern desktop technologies.",
+                image: "assets/img/sortify_preview.gif",
+                category: "personal",
+                technologies: ["C#", ".NET 9", "AvaloniaUI"],
+                link: "https://github.com/msh31/Sortify",
+                linkText: "View Project",
+                linkType: "github"
+            }
         ];
     }
 
